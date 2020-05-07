@@ -1,4 +1,4 @@
-package com.emu.tests.java.interfaces;
+package com.emu.tests.java8.lambdas;
 
 public interface InterfaceTest {
 

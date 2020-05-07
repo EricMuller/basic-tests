@@ -1,4 +1,4 @@
-package com.emu.tests.java.heritage.innerclass;
+package com.emu.tests.java.innerclass;
 
 import org.junit.jupiter.api.Test;
 
