@@ -9,6 +9,6 @@ public class StringBuilderTest {
     void testSbustr() {
 
 
-        Assertions.assertEquals(8, new StringBuilder().append("coucou eric", 0, 8).length());
+        Assertions.assertEquals("coucou", new StringBuilder().append("coucou eric", 0, 6).toString());
     }
 }
