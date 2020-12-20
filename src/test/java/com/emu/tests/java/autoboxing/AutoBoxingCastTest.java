@@ -6,11 +6,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class AutoBoxingCastTest {
+class AutoBoxingCastTest {
 
     private class Data {
 
         private Long l;
+
         private Double d;
 
         private Integer i;
@@ -45,15 +46,15 @@ public class AutoBoxingCastTest {
 
         data.setL(24L);
 
-        assertEquals(data.getL(),24L);
+        assertEquals(24L, data.getL());
 
-        data.setL((Long)(long)24);
+        data.setL((Long) (long) 24);
 
-        assertEquals(data.getL(),24L);
+        assertEquals(24L, data.getL());
 
-        data.setL((long)24);
+        data.setL((long) 24);
 
-        assertEquals(data.getL(),24L);
+        assertEquals(24L, data.getL());
 
     }
 
@@ -62,9 +63,10 @@ public class AutoBoxingCastTest {
     void nullTest() {
 
 
-        Throwable exception = assertThrows(NullPointerException.class, () -> {
+         Data data = new Data();
 
-            double d = new Data().getD();
+        assertThrows(NullPointerException.class, () -> {
+            double d = data.getD();
         });
 
 
@@ -74,12 +76,11 @@ public class AutoBoxingCastTest {
     @DisplayName(" Cast Null Double to double should failed")
     void nullTest2() {
 
+        Data data = new Data();
 
-        Throwable exception = assertThrows(NullPointerException.class, () -> {
+        assertThrows(NullPointerException.class, () -> {
 
-            Data data = new Data();
-
-            if(Integer.valueOf(data.getI()) == 1 ){
+            if (Integer.valueOf(data.getI()) == 1) {
 
             }
 
